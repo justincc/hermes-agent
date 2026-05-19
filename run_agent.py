@@ -1282,7 +1282,7 @@ class AIAgent:
                     session_id=self.session_id,
                     role=role,
                     content=content,
-                    tool_name=msg.get("tool_name"),
+                    tool_name=msg.get("tool_name") or msg.get("name"),
                     tool_calls=tool_calls_data,
                     tool_call_id=msg.get("tool_call_id"),
                     finish_reason=msg.get("finish_reason"),

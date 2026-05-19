@@ -1571,7 +1571,7 @@ class SessionDB:
                         self._encode_content(msg.get("content")),
                         msg.get("tool_call_id"),
                         tool_calls_json,
-                        msg.get("tool_name"),
+                        msg.get("tool_name") or msg.get("name"),
                         now_ts,
                         msg.get("token_count"),
                         msg.get("finish_reason"),
